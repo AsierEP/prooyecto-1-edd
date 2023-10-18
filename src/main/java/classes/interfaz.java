@@ -93,7 +93,7 @@ public class interfaz extends javax.swing.JFrame {
         IndentElementosFuertementeConectados.setText("Identificar elementos fuertemente conectados");
         jPanel1.add(IndentElementosFuertementeConectados, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, 290, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/classes/Diseño sin título (2).png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/classes/UIBackground.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 320));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 320));
