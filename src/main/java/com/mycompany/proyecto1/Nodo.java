@@ -10,10 +10,11 @@ package com.mycompany.proyecto1;
  * @author User
  */
 public class Nodo<T> {
-        private T data;
+
+    private T data;
     private Nodo<T> pNext;
-    
-    public Nodo(T data){
+
+    public Nodo(T data) {
         this.data = data;
         this.pNext = null;
     }
@@ -33,6 +34,5 @@ public class Nodo<T> {
     public void setpNext(Nodo<T> pNext) {
         this.pNext = pNext;
     }
-    
-    
+
 }

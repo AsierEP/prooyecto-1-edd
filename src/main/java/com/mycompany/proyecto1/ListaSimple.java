@@ -20,15 +20,9 @@ public class ListaSimple<T> {
         this.size = 0;
     }
     
-    public boolean isEmpty(){
-        return this.pFirst == null;
-    }    
-    
-    public void AddStart(T data){
-        Nodo<T> nodo = new Nodo(data);
-        
-        
-        
+    public void AddUser(Usuario usuario){
+        Nodo nodo = new Nodo(usuario);
+                
         if (this.isEmpty()){
             this.pFirst = nodo;
             this.pLast = nodo;
@@ -43,6 +37,11 @@ public class ListaSimple<T> {
         
     }
     
+    public boolean isEmpty(){
+        return this.pFirst == null;
+    }    
+    
+
     public void AddEnd(T data){
         Nodo <T> nodo = new Nodo(data);
         
