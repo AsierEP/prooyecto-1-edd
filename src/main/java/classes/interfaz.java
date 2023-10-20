@@ -4,6 +4,10 @@
  */
 package classes;
 
+import java.io.File;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Dell
@@ -30,13 +34,12 @@ public class interfaz extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         salir = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        Título = new javax.swing.JLabel();
         CargarArchivo = new javax.swing.JButton();
-        ModificarGrafo1 = new javax.swing.JButton();
-        ActualizarRepositorio = new javax.swing.JButton();
-        MostrarGrafo = new javax.swing.JButton();
-        IndentElementosFuertementeConectados = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        lab1 = new javax.swing.JLabel();
+        lab2 = new javax.swing.JLabel();
+        Anteriordata = new javax.swing.JButton();
+        Fondolab = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,68 +56,50 @@ public class interfaz extends javax.swing.JFrame {
         });
         jPanel1.add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 60, 30));
 
-        jLabel1.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 0, 255));
-        jLabel1.setText("Proyecto 1: Análisis de redes sociales. ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, -1));
+        Título.setFont(new java.awt.Font("Segoe Print", 1, 24)); // NOI18N
+        Título.setForeground(new java.awt.Color(51, 0, 255));
+        Título.setText("Proyecto 1: Análisis de redes sociales. ");
+        jPanel1.add(Título, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, -1));
 
+        CargarArchivo.setBackground(new java.awt.Color(102, 255, 255));
+        CargarArchivo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         CargarArchivo.setText("Cargar archivo");
         CargarArchivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CargarArchivoActionPerformed(evt);
             }
         });
-        jPanel1.add(CargarArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 140, 40));
+        jPanel1.add(CargarArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 140, 40));
 
-        ModificarGrafo1.setText("Modificar grafo");
-        ModificarGrafo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarGrafo1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ModificarGrafo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 140, 40));
+        lab1.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        lab1.setForeground(new java.awt.Color(255, 255, 255));
+        lab1.setText("Por favor seleccione la opción");
+        jPanel1.add(lab1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 240, -1));
 
-        ActualizarRepositorio.setText("Actualizar repositorio");
-        ActualizarRepositorio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ActualizarRepositorioActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ActualizarRepositorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 150, 40));
+        lab2.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        lab2.setForeground(new java.awt.Color(255, 255, 255));
+        lab2.setText("de la que quiera obtener los datos del programa");
+        jPanel1.add(lab2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, -1, -1));
 
-        MostrarGrafo.setText("Mostrar grafo");
-        MostrarGrafo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MostrarGrafoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(MostrarGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, 160, 40));
+        Anteriordata.setBackground(new java.awt.Color(153, 255, 255));
+        Anteriordata.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Anteriordata.setText("Usar archivo previo");
+        jPanel1.add(Anteriordata, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 170, 40));
 
-        IndentElementosFuertementeConectados.setText("Identificar elementos fuertemente conectados");
-        jPanel1.add(IndentElementosFuertementeConectados, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, 290, 40));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/classes/UIBackground.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 320));
+        Fondolab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/classes/Diseño sin título (2).png"))); // NOI18N
+        jPanel1.add(Fondolab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 320));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MostrarGrafoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarGrafoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MostrarGrafoActionPerformed
-
-    private void ActualizarRepositorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarRepositorioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ActualizarRepositorioActionPerformed
-
-    private void ModificarGrafo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarGrafo1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ModificarGrafo1ActionPerformed
-
     private void CargarArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarArchivoActionPerformed
-        // TODO add your handling code here:
+        JFileChooser chooser = new JFileChooser();
+        chooser.showOpenDialog(null);
+        File f = chooser.getSelectedFile();
+        String Filename = f.getAbsolutePath();
+        JOptionPane.showMessageDialog(null, Filename);
     }//GEN-LAST:event_CargarArchivoActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
@@ -157,14 +142,13 @@ public class interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ActualizarRepositorio;
+    private javax.swing.JButton Anteriordata;
     private javax.swing.JButton CargarArchivo;
-    private javax.swing.JButton IndentElementosFuertementeConectados;
-    private javax.swing.JButton ModificarGrafo1;
-    private javax.swing.JButton MostrarGrafo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel Fondolab;
+    private javax.swing.JLabel Título;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lab1;
+    private javax.swing.JLabel lab2;
     private javax.swing.JButton salir;
     // End of variables declaration//GEN-END:variables
 }
