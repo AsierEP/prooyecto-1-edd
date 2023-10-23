@@ -5,11 +5,7 @@
  */
 package com.mycompany.proyecto1;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.io.BufferedReader;
-import java.io.FileReader;
+
 
     
 /**
@@ -17,7 +13,45 @@ import java.io.FileReader;
  * @author User
  */
 public class Grafo {
-    Map<String, Nodo> nodos;
+    private ListaSimple[] listasAdyacencia;
+    
+    public Grafo(int usuarios){
+        this.listasAdyacencia = new ListaSimple[usuarios];
+        
+    }
+    public void addEnlace(int usuario1, int usuario2){
+        if (listasAdyacencia[usuario1] == null){
+            listasAdyacencia[usuario1] = new ListaSimple();
+            
+        }
+        if (listasAdyacencia[usuario2] == null){
+            listasAdyacencia[usuario2] = new ListaSimple();
+    }
+        
+        listasAdyacencia[usuario1].addUsuario(new Usuario(String.valueOf(usuario2)));
+        listasAdyacencia[usuario2].addUsuario(new Usuario(String.valueOf(usuario1)));
+        
+        
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
+    public Nodo(Usuario usuario){
+        this.usuario = usuario;
+        this.pNext = null;
+    }
     
     
     public Grafo(){
@@ -32,6 +66,6 @@ public class Grafo {
         nodousuario2.setpNext(nodousuario1);
     }
     
-    
+    */
     
 }

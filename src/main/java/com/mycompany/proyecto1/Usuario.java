@@ -11,8 +11,12 @@ package com.mycompany.proyecto1;
  */
 public class Usuario {
     String nombre;
-    int relacion;
     ListaSimple relaciones = new ListaSimple();
+    
+    
+    public Usuario(String nombre){
+        this.nombre = null;
+    }
 
     public String getNombre() {
         return nombre;
@@ -22,13 +26,6 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public int getRelacion() {
-        return relacion;
-    }
-
-    public void setRelacion(int relacion) {
-        this.relacion = relacion;
-    }
 
     public ListaSimple getRelaciones() {
         return relaciones;

@@ -9,30 +9,34 @@ package com.mycompany.proyecto1;
  *
  * @author User
  */
-public class Nodo<T> {
-
-    private T data;
-    private Nodo<T> pNext;
-
-    public Nodo(T data) {
-        this.data = data;
+public class Nodo {
+    
+    Usuario usuario;
+    Nodo pNext;
+    
+    public Nodo(Usuario usuario){
+        this.usuario = null;
         this.pNext = null;
+        
     }
 
-    public T getData() {
-        return data;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setData(T data) {
-        this.data = data;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public Nodo<T> getpNext() {
+    public Nodo getpNext() {
         return pNext;
     }
 
-    public void setpNext(Nodo<T> pNext) {
+    public void setpNext(Nodo pNext) {
         this.pNext = pNext;
     }
+    
+    
+
 
 }
