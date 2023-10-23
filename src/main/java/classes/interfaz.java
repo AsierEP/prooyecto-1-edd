@@ -100,6 +100,10 @@ public class interfaz extends javax.swing.JFrame {
         File f = chooser.getSelectedFile();
         String Filename = f.getAbsolutePath();
         JOptionPane.showMessageDialog(null, Filename);
+        
+        this.setVisible(false);
+        DataInterfaz ventanadata = new DataInterfaz();
+        ventanadata.setVisible(true);
     }//GEN-LAST:event_CargarArchivoActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed

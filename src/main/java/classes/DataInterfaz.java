@@ -47,6 +47,11 @@ public class DataInterfaz extends javax.swing.JFrame {
 
         VerGrafo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         VerGrafo.setText("Visualizar grafo");
+        VerGrafo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VerGrafoActionPerformed(evt);
+            }
+        });
         getContentPane().add(VerGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 180, 70));
 
         InstructionsGrafo.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
@@ -78,6 +83,10 @@ public class DataInterfaz extends javax.swing.JFrame {
         ModificarGrafosInterfaz ventanamod = new ModificarGrafosInterfaz();
         ventanamod.setVisible(true);
     }//GEN-LAST:event_ModificarGrafoActionPerformed
+
+    private void VerGrafoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerGrafoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VerGrafoActionPerformed
 
     /**
      * @param args the command line arguments
