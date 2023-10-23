@@ -5,7 +5,9 @@
 package classes;
 
 import java.io.File;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,7 +24,6 @@ public class interfaz extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setResizable(false);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -86,14 +87,13 @@ public class interfaz extends javax.swing.JFrame {
         Anteriordata.setText("Usar archivo previo");
         jPanel1.add(Anteriordata, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 170, 40));
 
-        Fondolab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/classes/Diseño sin título (2).png"))); // NOI18N
+        Fondolab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sources/fondo1.png"))); // NOI18N
         jPanel1.add(Fondolab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 320));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
     private void CargarArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarArchivoActionPerformed
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
@@ -137,6 +137,7 @@ public class interfaz extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new interfaz().setVisible(true);
+                
             }
         });
     }

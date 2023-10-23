@@ -13,9 +13,9 @@ import classes.interfaz;
 public class Proyecto1 {
 
     public static void main(String[] args) {
+        System.out.println("hola mundo");
         interfaz ventana = new interfaz();
         ventana.setVisible(true);
-        System.out.println("hola mundo");
         
     }
 }
