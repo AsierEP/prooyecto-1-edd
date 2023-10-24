@@ -15,6 +15,8 @@ public class DataInterfaz extends javax.swing.JFrame {
      */
     public DataInterfaz() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
