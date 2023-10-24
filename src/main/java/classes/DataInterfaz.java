@@ -61,7 +61,7 @@ public class DataInterfaz extends javax.swing.JFrame {
 
         CFCGrafo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         CFCGrafo.setText("Componentes Fuertemente conectados");
-        getContentPane().add(CFCGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 310, 70));
+        getContentPane().add(CFCGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 360, 70));
 
         ModificarGrafo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         ModificarGrafo.setText("Modificación del grafo");

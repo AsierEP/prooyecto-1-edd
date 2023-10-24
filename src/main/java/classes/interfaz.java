@@ -9,12 +9,15 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
+import javax.swing.filechooser.FileNameExtensionFilter;
 /**
  *
  * @author Dell
  */
 public class interfaz extends javax.swing.JFrame {
+    
+    private FileNameExtensionFilter filter = new FileNameExtensionFilter("Archivos de tipo TXT","txt","TXT");
+    
 
     /**
      * Creates new form interfaz
@@ -85,7 +88,12 @@ public class interfaz extends javax.swing.JFrame {
         Anteriordata.setBackground(new java.awt.Color(153, 255, 255));
         Anteriordata.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Anteriordata.setText("Usar archivo previo");
-        jPanel1.add(Anteriordata, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 170, 40));
+        Anteriordata.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnteriordataActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Anteriordata, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 210, 40));
 
         Fondolab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sources/fondo1.png"))); // NOI18N
         jPanel1.add(Fondolab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 320));
@@ -95,20 +103,31 @@ public class interfaz extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     private void CargarArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarArchivoActionPerformed
-        JFileChooser chooser = new JFileChooser();
-        chooser.showOpenDialog(null);
-        File f = chooser.getSelectedFile();
-        String Filename = f.getAbsolutePath();
-        JOptionPane.showMessageDialog(null, Filename);
-        
-        this.setVisible(false);
-        DataInterfaz ventanadata = new DataInterfaz();
-        ventanadata.setVisible(true);
+        JFileChooser filechoose = new JFileChooser();
+        filechoose.setFileFilter(filter);
+        int opcion = filechoose.showOpenDialog(null);
+        if(opcion == JFileChooser.APPROVE_OPTION){ 
+            filechoose.showOpenDialog(null);
+            File f = filechoose.getSelectedFile();
+            String Filename = f.getAbsolutePath();
+            JOptionPane.showMessageDialog(null, Filename);
+            // colocamos la visualización de la ventana
+            this.setVisible(false);
+            DataInterfaz ventanadata = new DataInterfaz();
+            ventanadata.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(null, "El archivo que ha seleccionado es inválido");
+            this.setVisible(true);
+        }
     }//GEN-LAST:event_CargarArchivoActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
         this.dispose();
     }//GEN-LAST:event_salirActionPerformed
+
+    private void AnteriordataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnteriordataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnteriordataActionPerformed
 
     /**
      * @param args the command line arguments
