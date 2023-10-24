@@ -47,6 +47,7 @@ public class DataInterfaz extends javax.swing.JFrame {
         TituloGrafo.setText("Grafo");
         getContentPane().add(TituloGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 80, 80));
 
+        VerGrafo.setBackground(new java.awt.Color(102, 255, 255));
         VerGrafo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         VerGrafo.setText("Visualizar grafo");
         VerGrafo.addActionListener(new java.awt.event.ActionListener() {
@@ -61,10 +62,12 @@ public class DataInterfaz extends javax.swing.JFrame {
         InstructionsGrafo.setText("Por favor seleccione la opción que desea realizar");
         getContentPane().add(InstructionsGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 380, 50));
 
+        CFCGrafo.setBackground(new java.awt.Color(102, 255, 255));
         CFCGrafo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         CFCGrafo.setText("Componentes Fuertemente conectados");
         getContentPane().add(CFCGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 360, 70));
 
+        ModificarGrafo.setBackground(new java.awt.Color(102, 255, 255));
         ModificarGrafo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         ModificarGrafo.setText("Modificación del grafo");
         ModificarGrafo.addActionListener(new java.awt.event.ActionListener() {
