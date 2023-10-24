@@ -15,6 +15,8 @@ public class ModificarGrafosInterfaz extends javax.swing.JFrame {
      */
     public ModificarGrafosInterfaz() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
