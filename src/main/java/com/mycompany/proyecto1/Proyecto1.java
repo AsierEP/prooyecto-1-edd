@@ -11,7 +11,17 @@ package com.mycompany.proyecto1;
 public class Proyecto1 {
 
     public static void main(String[] args) {
-        System.out.println("hola mundo");
-        System.out.println("pupu");
+        Grafo grafo = new Grafo();
+        
+        grafo.agregarVertice("Juan");
+        grafo.agregarVertice("Pedro");
+        grafo.agregarVertice("Sebastian");
+        grafo.agregarVertice("Sabrina");
+        grafo.agregarVertice("Luis");
+        
+        grafo.print();
+        
+        
+        
     }
 }

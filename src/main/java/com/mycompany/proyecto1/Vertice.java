@@ -7,18 +7,17 @@ package com.mycompany.proyecto1;
 
 /**
  *
- * @author User
+ * @author Juan
  */
-public class Usuario {
+public class Vertice {
     private String nombre;
-    private ListaSimple relaciones = new ListaSimple();
-    
-    
-    public Usuario(String nombre){
-        this.nombre = null;
+    private ListaSimple relaciones;
+
+    public Vertice(String nombre) {
+        this.nombre = nombre;
+        this.relaciones = new ListaSimple();
     }
-    
-    
+
     public String getNombre() {
         return nombre;
     }
@@ -26,7 +25,6 @@ public class Usuario {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
 
     public ListaSimple getRelaciones() {
         return relaciones;
@@ -37,4 +35,8 @@ public class Usuario {
     }
     
     
+    
+    
+    
+
 }
