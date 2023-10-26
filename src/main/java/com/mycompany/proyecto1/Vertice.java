@@ -7,7 +7,7 @@ package com.mycompany.proyecto1;
 
 /**
  *
- * @author Juan
+ * @author User
  */
 public class Vertice {
     private String nombre;

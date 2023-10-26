@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Juan
+ * @author User
  */
 public class ListaSimple<T> {
     //Atributos de la clase
