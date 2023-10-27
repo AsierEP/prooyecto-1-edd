@@ -4,6 +4,8 @@
 
 package com.mycompany.proyecto1;
 
+import UIs.LoadArchivesUI;
+
 /**
  *
  * @author Dell
@@ -21,7 +23,8 @@ public class Proyecto1 {
         
         grafo.print();
         
-        
+        LoadArchivesUI ventanaLoad = new LoadArchivesUI();
+        ventanaLoad.setVisible(true);
         
     }
 }
