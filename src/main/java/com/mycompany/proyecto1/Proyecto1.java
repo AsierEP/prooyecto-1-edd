@@ -26,5 +26,6 @@ public class Proyecto1 {
         LoadArchivesUI ventanaLoad = new LoadArchivesUI();
         ventanaLoad.setVisible(true);
         
+        
     }
 }
