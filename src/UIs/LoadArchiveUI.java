@@ -4,10 +4,12 @@
  */
 package UIs;
 
+import Graphs.ListaSimple;
 import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import TXT.Util;
 
 /**
  *
@@ -92,7 +94,7 @@ public class LoadArchiveUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CargarArchivoButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarArchivoButtActionPerformed
-        JFileChooser filechoose = new JFileChooser();
+JFileChooser filechoose = new JFileChooser();
         filechoose.setFileFilter(filter);
         int opcion = filechoose.showOpenDialog(null);
         if(opcion == JFileChooser.APPROVE_OPTION){ 
@@ -100,14 +102,10 @@ public class LoadArchiveUI extends javax.swing.JFrame {
             File f = filechoose.getSelectedFile();
             String Filename = f.getAbsolutePath();
             JOptionPane.showMessageDialog(null, Filename);
-            // colocamos la visualización de la ventana
             this.setVisible(false);
             VisualizeGraphUI ventanavisualize = new VisualizeGraphUI();
             ventanavisualize.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(null, "El archivo que ha seleccionado es inválido");
-            this.setVisible(true);
-    }             
+        }                                       
     }//GEN-LAST:event_CargarArchivoButtActionPerformed
 
     private void UsarArchivoButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsarArchivoButtActionPerformed

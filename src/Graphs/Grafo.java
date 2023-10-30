@@ -16,7 +16,7 @@ import org.graphstream.ui.view.Viewer;
  * @author User
  */
 public class Grafo {
-        private ListaSimple vertices;
+        public ListaSimple vertices;
 
     public Grafo() {
         this.vertices = new ListaSimple();
