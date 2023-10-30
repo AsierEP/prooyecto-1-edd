@@ -61,7 +61,7 @@ public class Util {
     }
     
     
-    public static ListaSimple read(){
+    public static ListaSimple<Arista> read(){
         String filePath = loadTxt();
         
         try{
@@ -69,7 +69,7 @@ public class Util {
             BufferedReader reader = new BufferedReader(fileR);
             
             String line;
-            ListaSimple adyList = new ListaSimple();
+            ListaSimple<Arista> adyList = new ListaSimple<Arista>();
             while((line = reader.readLine()) != null){
                 if(line.contains(",")){
                     String[] array = line.split(",");
@@ -85,11 +85,8 @@ public class Util {
         }
     }
     
-    public static void readUsers(){
+    public static void readUsers(Grafo listvertices){
         String filePath = loadTxt();
-        Grafo listvertices = new Grafo();
-
-        
         try{
             FileReader file = new FileReader(filePath);
             BufferedReader reader = new BufferedReader(file);
@@ -112,10 +109,8 @@ public class Util {
         }  
     }
     
-    public static void readRelations(){
-        String filePath = loadTxt();
-        Grafo metodo = new Grafo();
-        
+    public static void readRelations(Grafo metodo){
+        String filePath = loadTxt();        
         try{
             FileReader file = new FileReader(filePath);
             BufferedReader reader = new BufferedReader(file);
@@ -141,7 +136,7 @@ public class Util {
         }
         catch(Exception error){
             System.out.println(error);
-        }  
+        } 
     }
     
     public static void write(){

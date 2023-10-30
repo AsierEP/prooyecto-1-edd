@@ -11,7 +11,6 @@ import Graphs.Grafo;
  * @author Dell
  */
 public class VisualizeGraphUI extends javax.swing.JFrame {
-
     /**
      * Creates new form VisualizeGraphUI
      */
@@ -91,8 +90,7 @@ public class VisualizeGraphUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void VisualizarGrafoButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VisualizarGrafoButtActionPerformed
-        Grafo printeo = new Grafo();
-        printeo.Graphprint();
+        //
     }//GEN-LAST:event_VisualizarGrafoButtActionPerformed
 
     private void IdentificarEFCButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdentificarEFCButtActionPerformed

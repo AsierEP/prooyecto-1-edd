@@ -4,6 +4,7 @@
  */
 package UIs;
 
+import Graphs.Grafo;
 import Graphs.ListaSimple;
 import java.io.File;
 import javax.swing.JFileChooser;
@@ -94,18 +95,23 @@ public class LoadArchiveUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CargarArchivoButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargarArchivoButtActionPerformed
-JFileChooser filechoose = new JFileChooser();
-        filechoose.setFileFilter(filter);
-        int opcion = filechoose.showOpenDialog(null);
-        if(opcion == JFileChooser.APPROVE_OPTION){ 
-            filechoose.showOpenDialog(null);
-            File f = filechoose.getSelectedFile();
-            String Filename = f.getAbsolutePath();
-            JOptionPane.showMessageDialog(null, Filename);
+        //JFileChooser filechoose = new JFileChooser();
+        //filechoose.setFileFilter(filter);
+        //int opcion = filechoose.showOpenDialog(null);
+        //if(opcion == JFileChooser.APPROVE_OPTION){ 
+            //filechoose.showOpenDialog(null);
+            //File f = filechoose.getSelectedFile();
+            //String Filename = f.getAbsolutePath();
+            //JOptionPane.showMessageDialog(null, Filename);
+
+            Grafo printeo = new Grafo();
+            Util a = new Util();
+            a.readUsers(printeo);
+            a.readRelations(printeo);
+            printeo.print();
             this.setVisible(false);
             VisualizeGraphUI ventanavisualize = new VisualizeGraphUI();
             ventanavisualize.setVisible(true);
-        }                                       
     }//GEN-LAST:event_CargarArchivoButtActionPerformed
 
     private void UsarArchivoButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsarArchivoButtActionPerformed
